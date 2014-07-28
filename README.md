@@ -1,13 +1,8 @@
 # tackmann.co 
 
- 0 pushd build/web
- 1. find . -path ./.git -prune -o -exec rm -rf {} \; 2> /dev/null
- 2. popd
- 3. mv build/web build/web_old
- 4. pub build 
- 5. mv build/web_old/.git build/web
- 6. rm -rf build/web_old
- 
-## TODO 
-1. Make build script
-2. Describe git workflow
+## Git Flow
+1. Commit changes in build/web
+2. Add build/web to git index
+3. Commit changes in parent repo
+4. Push changes in build/web
+5. Push changes in parent
