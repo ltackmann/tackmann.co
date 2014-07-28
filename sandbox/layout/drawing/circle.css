@@ -1,0 +1,46 @@
+h2, section {
+    display: inline-block;
+}
+
+#circle > .full-circle {
+    background-color: #c06;
+    height: 150px;
+    border-radius:75px;
+    width: 150px;
+    float: left;
+}
+
+#circle-stroke .full-circle {
+    background-color: #c06;
+    border: 3px solid #333;
+    height: 150px;
+    border-radius:75px;
+    width: 150px;
+    float: left;
+}
+
+#circle-transparent .full-circle {
+    background-color: rgba(204, 0, 102, 0);
+    border: 3px solid #333;
+    height: 150px;
+    border-radius:75px;
+    width: 150px;
+}
+
+#circle-transition .full-circle {
+    -webkit-transition-property: height, width, border-radius;
+    -webkit-transition-duration: 1s, 1s, 1s;
+    -webkit-transition-timing-function: linear, linear, linear;
+
+    background-color: #c06;
+    height: 150px;
+    border-radius:75px;
+    width: 150px;
+    float: left;
+}
+
+#circle-transition .full-circle:hover {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+}

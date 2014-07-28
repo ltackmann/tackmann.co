@@ -1,0 +1,53 @@
+@import "../styles/common";
+@import "mixins";
+@import "styles";
+
+#linear_gradient_samples {
+  #pattern1 {
+    /* 20% yellow left and 20% (100-80) green right and 60% (100-20-20) gradient from yellow to green */
+    @include linear-gradient(left, yellow 20%, green 80%);
+  }
+  
+  #pattern2 {
+    /* 30% yellow left and 70% (100-30) green right */
+    @include linear-gradient(left, yellow 30%, green 30%);
+  }
+  
+  #pattern3 {
+    /* 50% yellow left and 50% (100-50) green right placed in a 50px width and 50px high background */
+    @include linear-gradient(left, yellow 50%, green 50%);
+    background-size: 50px 50px;
+  }
+  
+  #pattern4 {
+    /* 50% yellow left and 50% (100-50) green right rotated 45 degree in a 25px width and 25px high box */
+    @include linear-gradient(45deg, yellow 50%, green 50%);
+    background-size: 25px 25px;  
+  }
+  
+  #pattern5 {
+    /* 
+      - 0-25% = yellow
+      - 25%-50% = green
+      - 50%-75% = yellow
+      - 75%-100% = green
+      rotated 45 degree in a 50px width and 50px high box
+     */
+    @include linear-gradient(45deg, 
+        yellow 25%, 
+        green 25%, green 50%, 
+        yellow 50%, yellow 75%,
+        green 75%);
+     background-size: 50px 50px;  
+  }
+  
+  #pattern6 {
+    /*
+     - 0-25px yellow
+     - 25-50px green
+     */
+    @include repeating-linear-gradient(45deg, yellow 0px, yellow 25px, green 25px, green 50px);  
+  }
+}
+
+/* TODO multiple backgrounds http://24ways.org/2011/css3-patterns-explained/ */

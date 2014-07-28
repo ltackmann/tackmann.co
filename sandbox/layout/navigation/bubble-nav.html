@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bubble Navigation</title>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        /*
+         TODO move to LESS and
+        */
+        h1 {
+            font-family: 'Lobster', cursive;
+        }
+        #nav {
+            position: relative;
+            background-color: transparent;
+            border: 110px solid rgb(245, 245, 245);
+            height: 800px;
+            border-radius:550px;
+            width: 800px;
+            margin-top: 100px;
+            margin-left: -50px;
+        }
+
+        .item {
+            display: inline-block;
+            position: absolute;
+            height: 80px;
+            border-radius:40px;
+            width: 80px;
+        }
+
+        .user {
+            left: 75px;
+            top: -100px;
+            background-color: rgba(121,205,239, 0.8);
+        }
+
+        .home {
+            left: 250px;
+            top: -150px;
+            background-color: rgba(75,185,230, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <!-- TODO integrate with code experiments layout -->
+    <!-- http://tympanus.net/Tutorials/BubbleNavigation/ -->
+    <h1>Bubble Navigation</h1>
+    <div class="navigation" id="nav">
+        <!-- TODO inner circle -->
+        <div class="item user">
+            <a href="#" class="icon"></a>
+            <h2>User</h2>
+            <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Properties</a></li>
+                <li><a href="#">Privacy</a></li>
+            </ul>
+        </div>
+        <div class="item home">
+            <a href="#" class="icon"></a>
+            <h2>Home</h2>
+            <ul>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

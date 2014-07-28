@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebWorkers Demo</title>
+</head>
+<body>
+<h1>Web Worker Demo</h1>
+<input type="text" id="workerMessage"/>
+<button id="sendToWorker">Send to worker</button>
+<button id="terminateWorker">Terminate worker</button>
+
+<div id="output"></div>
+
+<script type="text/javascript">
+    var _output = document.getElementById("output");
+
+    // TODO use jquery
+    var _btnSubmit = document.getElementById("sendToWorker");
+    var _inputForWorker = document.getElementById("workerMessage");
+    var _killWorker = document.getElementById("terminateWorker");
+
+    // Instantiating the Worker
+    var myHelloWorker = new Worker('helloworker.js');
+    // handle for messages sent back by the worker
+    myHelloWorker.addEventListener("message", function (event) {
+        document.getElementById("output").textContent = event.data;
+    }, false);
+
+    _btnSubmit.addEventListener("click", function (event) {
+        // On envoit désormais les messages via la commande 'hello'
+        myHelloWorker.postMessage(_inputForWorker.value);
+    }, false);
+
+    // Stop the worker via the terminate() command
+    _killWorker.addEventListener("click", function (event) {
+        // Stopping the worker via the terminate() command
+        myHelloWorker.terminate();
+        _output.textContent = "The worker has been stopped.";
+    }, false);
+</script>
+
+<!-- TODO continue with sample from http://www.codeproject.com/KB/solution-center/HTML5-Web-Workers.aspx-->
+</body>
+</html>

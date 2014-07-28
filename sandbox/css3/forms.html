@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>forms</title>
+    <style>
+      input:required + label::after { content: "*"; }
+    </style>
+  </head>
+    <form action="" autocomplete="off">
+      <label for="username">Username</label>
+      <input id="username" name="username" required>
+  
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required>
+      <p/>
+      <button type="submit">Login</button>
+    </form>
+    
+    <!-- TODO capture form in Dart http://stackoverflow.com/questions/5384712/capture-a-form-submit-in-javascript -->
+  <body>   
+  </body>
+</html>

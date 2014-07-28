@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hybrid fixed-fluid layout</title>
+    <style>
+        section {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+        }
+        article {
+            display: table-cell;
+            padding: 10px;
+            vertical-align: top;
+        }
+        article.fixed {
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <header>
+        <h1>Hybrid fixed-fluid layout</h1>
+    </header>
+
+    <div>
+        <article>
+            <header>
+                <h2>A fluent post</h2>
+            </header>
+            <p>Some text that makes the post wrap around when it is shrunk</p>
+        </article>
+        <article class="fixed">
+            <header>
+                <h2>A fixed post</h2>
+            </header>
+            <p>More text that makes the post wrap around when it is shrunk</p>
+        </article>
+    </div>
+</section>
+</body>
+</html>

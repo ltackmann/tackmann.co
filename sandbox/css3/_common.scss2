@@ -1,0 +1,54 @@
+/* constants */
+$black: rgb(0, 0, 0);
+$gray: rgb(39, 39, 39);
+$white: rgb(255, 255, 255);
+$fontsize: 14px; 
+
+/* generic classes */
+ul.inline_list {
+  padding: 0;
+  margin: 0;
+  li {
+    display: inline-block; 
+    list-style: none;
+  }
+}
+
+/* font stack */
+body {
+  font-family: ‘Lucida Grande’, ‘Lucida Sans Unicode’, Lucida, Corbel, Verdana, Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4 {
+  font-family: ‘Lucida Grande’, ‘Lucida Sans’, Lucida, Corbel, Verdana, Arial, Helvetica, sans-serif;
+}
+/*
+code, pre {
+  font-family: ‘Lucida Console’, ‘Andale Mono’, Monaco, ‘Courier New’, Courier, monospace;
+}
+*/
+
+/* default overrides */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-size: $fontsize;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+h1 { font-size: 3em; }
+h2 { font-size: 1.4em; }
+h3 {font-size: 1.2em; }
+h4 { font-size: 1.1em; }
+h1,h2,h3,h4 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;  
+}

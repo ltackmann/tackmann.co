@@ -1,0 +1,17 @@
+.samples {
+  li {
+    width: 250px;
+    height: 50px;
+    margin-top: 30px;
+    margin-right: 5px;
+    div {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+    p {
+       margin: 0;
+       padding: 0;
+    }
+  }
+}

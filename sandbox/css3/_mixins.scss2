@@ -1,0 +1,15 @@
+@mixin linear-gradient($arguments...) {
+  background: -webkit-linear-gradient($arguments);
+  background: -moz-linear-gradient($arguments);
+  background: -o-linear-gradient($arguments);
+  background: -ms-linear-gradient($arguments);
+  background: linear-gradient($arguments);
+}
+
+@mixin repeating-linear-gradient($arguments...) {
+  background: -webkit-repeating-linear-gradient($arguments);
+  background: -moz-repeating-linear-gradient($arguments);
+  background: -o-repeating-linear-gradient($arguments);
+  background: -ms-repeating-linear-gradient($arguments);
+  background: repeating-linear-gradient($arguments);
+}

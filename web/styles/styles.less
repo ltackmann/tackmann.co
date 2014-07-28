@@ -1,0 +1,75 @@
+@import "reset";
+@import "classes";
+
+// constants
+@grayLight: rgb(241, 241, 241);
+@grayDark: rgb(204, 204, 204);
+@black: rgb(45, 45, 45);
+@white: rgb(255, 255, 255);
+
+// checkout http://www.igvita.com/
+body, html { height: 100%; }
+body {
+  background-color: @grayLight;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+ 
+  display: -webkit-flex;
+  -webkit-flex-flow: column;
+  // cross axis
+  -webkit-align-items: center;
+  // main axis
+  -webkit-justify-content: stretch;
+}
+
+// layout
+#header, #footer {
+  max-height: 2.4em;
+  width: 100%;
+  background: @black;
+  p, nav {
+    margin: 0.7em;  
+  }
+  a, p {
+    color: @grayDark;
+    text-decoration: none;
+  }
+}
+
+#header {
+  -webkit-flex: 1;
+  -webkit-order: 1;
+  
+  nav {
+    // TODO use constants and less math capabilities here
+    margin-left: 10%;
+  }
+}
+
+#content {
+  -webkit-flex: 22;
+  -webkit-order: 2;
+  width: 80%;
+  background: @white;
+}
+
+#footer {
+  -webkit-flex: 1;
+  -webkit-order: 3;
+  text-align: center;
+  font-size: 0.9em;
+}   
+
+@media all and (max-width: 640px) { 
+  // remove center margin
+  header nav {
+    margin-left: 0;
+  }  
+  section {
+    width: 100%;
+  }
+}
+
+
+
