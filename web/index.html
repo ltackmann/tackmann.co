@@ -12,43 +12,54 @@
     <link rel="canonical" href="http://tackmann.co">
    
     <!-- components -->
-    <!--link rel="components" href="templates/about_page.html">
-    <link rel="components" href="templates/home_page.html"-->
     <script src="packages/web_components/platform.js"></script>
     <script src="packages/web_components/dart_support.js"></script>
-    <link rel="import" href="packages/paper_elements/paper_input.html">
+    <!-- polymer components -->
+    <!--link rel="import" href="packages/core_elements/core_header_panel.html"-->
+    <link rel="import" href="packages/core_elements/core_item.html">
+    <link rel="import" href="packages/core_elements/core_menu.html">
+    <link rel="import" href="packages/core_elements/core_toolbar.html">
+    <!-- costum components -->
+    <link rel="import" href="my_articles.html">
     
     <!-- styling -->
     <link rel="stylesheet" type="text/css" href="styles/layout.css">
 </head>
 <body unresolved>
   <core-header-panel>
-    <core-toolbar id="header">
-      <paper-icon-button id="navicon" icon="arrow-back"></paper-icon-button>
-      <paper-icon-button id="searchbutton" icon="search"></paper-icon-button>
+    <core-toolbar id="mainheader">
+      <a href="http://www.tackmann.co">tackmann.co</a> | <em>No pressure, no diamonds</em>
+      <core-item id="navicon" icon="arrow-back"></core-item>
+      <core-item id="searchbutton" icon="search"></core-item>
     </core-toolbar>
-  
-    <div id="description">
-      <h1 flex>Lars Tackmann</h1>
-      <ul>
-        <li>Actuary and Mathematician</li>
-        <li>Chief Software architet at Schantz</li>
-        <li>Entrepreneur</li>
-      </ul>
-    </div>
     
-    <div id="content">
-      <!-- TODO create custom article tag (set CSS, record keywords and update article list) -->
-      <article class="article">
-        <h3>Recent Posts</h3>
-        <a>view all posts</a>
-      </article>
-      <article class="article">
-        <h3>Projects.</h3>
-        <a>view all projects</a>
-      </article>
-    </div>
-    </core-header-panel>
+    <my-articles></my-articles>
+    <section id="projects">
+      <h3>Projects.</h3>
+      <a>view all projects</a>
+    </section>
+    <!--div class="content">
+      <div id="description">
+        <h1 flex>Lars Tackmann</h1>
+        <core-menu selected="0" selectedItem="{{item}}">
+          <core-item icon="settings" label="Mathematician" horizontal center layout>Actuary and Mathematician</core-item>
+          <core-item icon="dialog" label="Architet" horizontal center layout>Chief Software Architet at Schantz</core-item>
+          <core-item icon="search" label="Entrepreneur" horizontal center layout>Entrepreneur</core-item>
+        </core-menu>
+        <p id="icons">
+          <a rel="me" href="http://www.amazon.com/gp/pdp/profile/ADXW0046R1OYO">amazon.com</a>
+          <a rel="me" href="https://github.com/ltackmann">github.com</a>
+          <a rel="me" href="https://plus.google.com/u/0/+LarsTackmann">google+</a>
+          <a rel="me" href="https://www.linkedin.com/in/ltackmann">
+            <object type="image/svg+xml" width="48" height="48" data="styles/images.svg#linkedin"></object>
+          </a>
+          <a rel="me" href="http://stackoverflow.com/users/231211/lars-tackmann ">stackoverflow.com</a>
+          <a rel="me" href="https://twitter.com/ltackmann">
+            <object type="image/svg+xml" width="48" height="48" data="styles/images.svg#twitter"></object>
+          </a>
+        </p>
+    </div-->
+  </core-header-panel>
   
   <!--footer id="footer">
     <p>Copyright (c) 2014, Lars Tackmann. All rights reserved.</p>

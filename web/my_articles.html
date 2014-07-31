@@ -1,0 +1,17 @@
+<link rel="import" href="../packages/polymer/polymer.html">
+<polymer-element name="my-articles" noscript>
+  <template>
+    <section id="articles">
+      <h3>Recent Posts</h3>
+      <a>view all posts</a>
+      <ul>
+        <template repeat="{{article in articles}}">
+            <li class="article">
+              Article {{article.id}}.
+            </li>
+        </template>
+      </ul>
+    </section>
+  </template> 
+  <script type="application/dart" src="my_articles.dart"></script>
+</polymer-element>

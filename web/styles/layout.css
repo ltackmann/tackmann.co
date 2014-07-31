@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+}
+
+#mainheader {
+  background: #03a9f4;
+  color: white;
+}
+
+#description {
+  background-color: #272727;
+}
+#description h1 {
+  color: white;
+  margin: 0;
+}
+
+#articles {
+  background: pink;
+}

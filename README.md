@@ -1,7 +1,6 @@
 # tackmann.co 
 
-## Site management
-### Git Flow
+## Git Flow
 1. Commit changes in build/web
 2. Add build/web to git index
 3. Commit changes in parent repo
